@@ -1,0 +1,13 @@
+#Creating virtual env
+-> Install virutal env : sudo apt install python3.10-ven
+-> Create Virutal env : python -m venv tutorial-env
+-> Activate Virutal env : source tutorial-env/bin/activate
+-> deactivate Virtual env: deactivate
+
+#Install Django in Virtual env
+Install Django after activating virtual env
+-> Install Django: pip install django
+-> Check Django Ver: python -m django version
+-> Create new project : django-admin startproject chefsTable
+-> run server: python manage runserver
+-> Create new app : python -m manage startapp myapp
