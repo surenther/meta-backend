@@ -1,10 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from myformapp.forms import LogForm
 
 # Create your views here.
-from myformapp.forms import Inputform
 
 def form_view(request):
-    form = Inputform()
+    form = LogForm()
+    if request.method == 'POST':
+        form = LogForm(request.POST)
+        if form.is_valid():
+            form.save()
     context = {'form':form}
     return render(request,"home.html",context)
